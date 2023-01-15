@@ -161,10 +161,10 @@ img {
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
+  border-radius: 2px;
   left: 0;
   bottom: 0;
 }
-
 
 
 .header_icon {
@@ -624,6 +624,7 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 
+
   transition: box-shadow var(--tran);
 }
 
@@ -643,8 +644,41 @@ img {
 }
 
 .gallery-list-link {
-  text-decoration: none;
+  display: block;
 }
+
+.gallery-list-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-list-toptext {
+  position: absolute;
+  top: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform var(--tran);
+  opacity: 0;
+  
+}
+
+
+.gallery-list-link:hover .gallery-list-toptext  {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+
+
 
 .gallery-list-content {
   padding: 20px 24px;
