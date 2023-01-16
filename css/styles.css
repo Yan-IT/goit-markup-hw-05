@@ -666,14 +666,11 @@ img {
 
   transform: translateY(100%);
   transition: transform var(--tran);
-  opacity: 0;
-  
 }
 
 
 .gallery-list-link:hover .gallery-list-toptext  {
   transform: translateY(0%);
-  opacity: 1;
 }
 
 
