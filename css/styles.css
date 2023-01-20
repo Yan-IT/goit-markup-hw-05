@@ -426,7 +426,7 @@ color: var(--title-text-color);
 .person-soc-link:hover,
 .person-soc-link:focus {
   background-color: var(--accent-color);
-  color: var(--accent-color);
+  color: var(--primary-white-color);
 }
 
 .soc_icons {
