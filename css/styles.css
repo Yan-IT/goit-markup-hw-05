@@ -430,7 +430,7 @@ color: var(--title-text-color);
 }
 
 .soc_icons {
-  color: currentColor;
+  fill: currentColor;
 }
 
 .sec-customers {
