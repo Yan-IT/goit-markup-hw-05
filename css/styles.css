@@ -132,14 +132,21 @@ img {
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color var(--tran), fill var(--tran);
+  transition: color var(--tran);
+}
+
+.site-nav-list .link {
+color: var(--primary-text-color);
+}
+
+.site-nav-list .contact {
+color: var(--title-text-color);
 }
 
 .site-nav-list .link:hover,
@@ -147,7 +154,6 @@ img {
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 .site-nav-list .link.current {
@@ -168,6 +174,7 @@ img {
 
 .header_icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /* End of header. */
@@ -325,11 +332,11 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-align: center;
-  padding: 27px 0;
 
-  transform: translateY(-100%);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -369,10 +376,7 @@ img {
 }
 
 .person-content {
-  display: flex;
-  flex-direction: column;
-
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .section-team-list .title {
@@ -412,17 +416,21 @@ img {
   height: 100%;
   display: flex;
   border-radius: 50%;
-
+  color: #AFB1B8;
   justify-content: center;
   align-items: center;
 
-  transition: background-color var(--tran), fill var(--tran);
+  transition: background-color var(--tran), color var(--tran);
 }
 
 .person-soc-link:hover,
 .person-soc-link:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  color: var(--accent-color);
+}
+
+.soc_icons {
+  color: currentColor;
 }
 
 .sec-customers {
@@ -449,30 +457,28 @@ img {
 }
 
 .customers-item-box {
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
-  left: 615px;
-  top: 2490px;
 
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   border-radius: 4px;
 
-  fill: #afb1b8;
+  color: #afb1b8;
 
-  transition: fill var(--tran), border-color var(--tran);
+  transition: color var(--tran);
 }
 
 .customers-item-box:hover,
 .customers-item-box:focus {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .customers_icons {
-  margin: 16px 32px;
+  /* margin: 16px 32px; */
+  fill: currentColor;
 }
 
 /* end of main. */
@@ -481,10 +487,12 @@ img {
 
 .footer-section-address {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -497,7 +505,6 @@ img {
   text-decoration: none;
 
   display: block;
-  padding-top: 60px;
   padding-bottom: 20px;
 }
 
@@ -510,8 +517,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
-
-  padding-bottom: 60px;
 }
 
 .footer-address-link {
@@ -543,7 +548,6 @@ img {
 }
 
 .join {
-  margin-top: 72px;
   margin-left: 70px;
 }
 
@@ -575,13 +579,13 @@ img {
   justify-content: center;
   align-items: center;
 
-  transition: background-color var(--tran), fill var(--tran);
+  transition: background-color var(--tran);
 }
 
 .join-button:hover,
 .join-button:focus {
   background-color: var(--accent-color);
-  fill: var(--primary-white-color);
+  /* fill: var(--primary-white-color); */
 }
 
 .join-link {
@@ -620,8 +624,7 @@ img {
   line-height: 1.62;
   text-align: center;
 
-  width: 125px;
-  height: 38px;
+  padding: 6px 22px;
   border-radius: 4px;
   border: 2px solid transparent;
 
@@ -646,8 +649,6 @@ img {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-
-  transition: box-shadow var(--tran);
 }
 
 .gallery-list .item:nth-child(3n) {
@@ -658,14 +659,15 @@ img {
   margin-bottom: 0;
 }
 
-.gallery-list .item:hover,
-.gallery-list .item:focus {
+.gallery-list-link:hover,
+.gallery-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-list-link {
   display: block;
+  transition: box-shadow var(--tran);
 }
 
 .gallery-list-wrap {
@@ -690,7 +692,8 @@ img {
   overflow: auto;
 }
 
-.gallery-list-link:hover .gallery-list-toptext {
+.gallery-list-link:hover .gallery-list-toptext, 
+.gallery-list-link:focus .gallery-list-toptext {
   transform: translateY(0%);
 }
 
